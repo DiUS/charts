@@ -168,4 +168,8 @@ class SeriesLegend<D> extends Legend<D> {
   bool isSeriesHidden(String seriesId) {
     return _hiddenSeriesList.contains(seriesId);
   }
+
+  List<String> showHiddenSeriesList() {
+    return _hiddenSeriesList.toList();
+  }
 }
