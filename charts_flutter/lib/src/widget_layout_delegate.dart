@@ -121,14 +121,14 @@ class WidgetLayoutDelegate extends MultiChildLayoutDelegate {
       switch (horizontalJustification) {
         case _HorizontalJustification.leftDrawArea:
           behaviorOffset =
-              new Offset(behavior.drawAreaBounds.left.toDouble(), heightOffset);
+              new Offset(behavior.drawAreaBounds?.left?.toDouble() ?? 0.0, heightOffset);
           break;
         case _HorizontalJustification.left:
           behaviorOffset = new Offset(0.0, heightOffset);
           break;
         case _HorizontalJustification.rightDrawArea:
           behaviorOffset = new Offset(
-              behavior.drawAreaBounds.right - behaviorSize.width, heightOffset);
+              (behavior.drawAreaBounds?.right ?? behaviorSize.width) - behaviorSize.width, heightOffset);
           break;
         case _HorizontalJustification.right:
           behaviorOffset =
@@ -147,7 +147,7 @@ class WidgetLayoutDelegate extends MultiChildLayoutDelegate {
         case common.OutsideJustification.startDrawArea:
         case common.OutsideJustification.middleDrawArea:
           behaviorOffset =
-              new Offset(widthOffset, behavior.drawAreaBounds.top.toDouble());
+              new Offset(widthOffset, behavior.drawAreaBounds?.top?.toDouble() ?? 0.0);
           break;
         case common.OutsideJustification.start:
         case common.OutsideJustification.middle:
@@ -155,7 +155,7 @@ class WidgetLayoutDelegate extends MultiChildLayoutDelegate {
           break;
         case common.OutsideJustification.endDrawArea:
           behaviorOffset = new Offset(widthOffset,
-              behavior.drawAreaBounds.bottom - behaviorSize.height);
+              (behavior.drawAreaBounds?.bottom ?? behaviorSize.height) - behaviorSize.height);
           break;
         case common.OutsideJustification.end:
           behaviorOffset =

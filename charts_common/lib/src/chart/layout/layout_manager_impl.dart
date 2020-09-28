@@ -112,7 +112,7 @@ class LayoutManagerImpl implements LayoutManager {
 
   @override
   Rectangle<int> get drawableLayoutAreaBounds {
-    assert(_drawAreaBoundsOutdated == false);
+    if (_drawAreaBoundsOutdated != false) return null;
 
     final drawableViews =
         _views.where((LayoutView view) => view.isSeriesRenderer);

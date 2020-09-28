@@ -419,7 +419,7 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
           // Create the bound elements separately from area elements, because
           // it needs to be rendered on top of the area elements.
           List<_AnimatedArea<D>> animatingBounds;
-          if (_hasMeasureBounds) {
+          if (_hasMeasureBounds == true) {
             animatingBounds ??= <_AnimatedArea<D>>[];
 
             for (var index = 0; index < boundsElementList.length; index++) {
@@ -480,7 +480,7 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
           }
         }
 
-        if (_hasMeasureBounds) {
+        if (_hasMeasureBounds == true) {
           for (var index = 0; index < boundsElementList.length; index++) {
             final boundElement = boundsElementList[index];
 
@@ -637,7 +637,7 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
 
     // Create the bounds element
     final boundsElements = <_AreaRendererElement<D>>[];
-    if (_hasMeasureBounds) {
+    if (_hasMeasureBounds == true) {
       // Update the set of bounds that still exist in the series data.
       for (var index = 0; index < boundsSegment.length; index++) {
         final boundsPointList = boundsSegment[index];
@@ -949,7 +949,7 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
         });
       }
 
-      if (_hasMeasureBounds) {
+      if (_hasMeasureBounds == true) {
         elements
             .map<List<_AnimatedArea<D>>>(
                 (_AnimatedElements<D> animatingElement) =>
