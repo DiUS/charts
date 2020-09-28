@@ -416,6 +416,7 @@ class _LinePointLayoutView<D> extends LayoutView {
     final paintedVerticalLinePositions = <num>[];
 
     final drawBounds = chart.drawableLayoutAreaBounds;
+    if (drawBounds == null) return;
 
     final rtl = chart.context.isRtl;
 

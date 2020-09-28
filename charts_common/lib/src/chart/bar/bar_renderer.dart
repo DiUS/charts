@@ -388,6 +388,8 @@ class BarRenderer<D>
     // TODO: Investigate why this is negative for a DateTime domain
     // in RTL mode.
     domainWidth = domainWidth.abs();
+    if (numBarGroups == null || numBarGroups == 0) numBarGroups = 1;
+    if (barGroupIndex == null) barGroupIndex = 0;
 
     // If no weights were passed in, default to equal weight per bar.
     if (barGroupWeight == null) {
