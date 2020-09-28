@@ -90,6 +90,7 @@ class PerSeriesLegendEntryGenerator<D> implements LegendEntryGenerator<D> {
       }
     }
 
+    if (legendEntries == null) return;
     for (var entry in legendEntries) {
       final seriesId = entry.series.id;
       final measureValue = seriesAndMeasure[seriesId]?.toDouble();

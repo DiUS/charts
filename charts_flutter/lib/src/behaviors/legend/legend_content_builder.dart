@@ -47,7 +47,7 @@ abstract class BaseLegendContentBuilder implements LegendContentBuilder {
   Widget build(BuildContext context, common.LegendState legendState,
       common.Legend legend,
       {bool showMeasures}) {
-    final entryWidgets = legendState.legendEntries.map((entry) {
+    final entryWidgets = legendState.legendEntries?.map((entry) {
       var isHidden = false;
       if (legend is common.SeriesLegend) {
         isHidden = legend.isSeriesHidden(entry.series.id);
@@ -56,7 +56,7 @@ abstract class BaseLegendContentBuilder implements LegendContentBuilder {
       return legendEntryLayout.build(
           context, entry, legend as TappableLegend, isHidden,
           showMeasures: showMeasures);
-    }).toList();
+    })?.toList() ?? [];
 
     return legendLayout.build(context, entryWidgets);
   }
