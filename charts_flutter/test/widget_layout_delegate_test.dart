@@ -94,7 +94,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.top;
       final outsideJustification = common.OutsideJustification.startDrawArea;
-      final drawAreaBounds = const Rectangle<int>(25, 50, 150, 50);
+      final drawAreaBounds = Rectangle<int>(25, 50, 150, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -116,7 +116,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.bottom;
       final outsideJustification = common.OutsideJustification.endDrawArea;
-      final drawAreaBounds = const Rectangle<int>(25, 0, 125, 50);
+      final drawAreaBounds = Rectangle<int>(25, 0, 125, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -138,7 +138,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.start;
       final outsideJustification = common.OutsideJustification.startDrawArea;
-      final drawAreaBounds = const Rectangle<int>(75, 25, 150, 50);
+      final drawAreaBounds = Rectangle<int>(75, 25, 150, 50);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -161,7 +161,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.end;
       final outsideJustification = common.OutsideJustification.endDrawArea;
-      final drawAreaBounds = const Rectangle<int>(25, 25, 150, 50);
+      final drawAreaBounds = Rectangle<int>(25, 25, 150, 50);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -184,7 +184,7 @@ void main() {
     testWidgets('Position top - start justified', (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.top;
       final outsideJustification = common.OutsideJustification.start;
-      final drawAreaBounds = const Rectangle<int>(25, 50, 150, 50);
+      final drawAreaBounds = Rectangle<int>(25, 50, 150, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -205,7 +205,7 @@ void main() {
     testWidgets('Position top - end justified', (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.top;
       final outsideJustification = common.OutsideJustification.end;
-      final drawAreaBounds = const Rectangle<int>(25, 50, 150, 50);
+      final drawAreaBounds = Rectangle<int>(25, 50, 150, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -228,7 +228,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.start;
       final outsideJustification = common.OutsideJustification.start;
-      final drawAreaBounds = const Rectangle<int>(75, 25, 150, 50);
+      final drawAreaBounds = Rectangle<int>(75, 25, 150, 50);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -250,7 +250,7 @@ void main() {
     testWidgets('Position start - end justified', (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.start;
       final outsideJustification = common.OutsideJustification.end;
-      final drawAreaBounds = const Rectangle<int>(75, 25, 150, 50);
+      final drawAreaBounds = Rectangle<int>(75, 25, 150, 50);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -273,7 +273,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.inside;
       final insideJustification = common.InsideJustification.topStart;
-      final drawAreaBounds = const Rectangle<int>(25, 25, 175, 75);
+      final drawAreaBounds = Rectangle<int>(25, 25, 175, 75);
 
       // Behavior is layered on top, chart uses the full size.
       final expectedChartSize = const Size(200.0, 100.0);
@@ -295,7 +295,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.inside;
       final insideJustification = common.InsideJustification.topEnd;
-      final drawAreaBounds = const Rectangle<int>(25, 25, 175, 75);
+      final drawAreaBounds = Rectangle<int>(25, 25, 175, 75);
 
       // Behavior is layered on top, chart uses the full size.
       final expectedChartSize = const Size(200.0, 100.0);
@@ -317,7 +317,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.top;
       final outsideJustification = common.OutsideJustification.startDrawArea;
-      final drawAreaBounds = const Rectangle<int>(0, 50, 175, 50);
+      final drawAreaBounds = Rectangle<int>(0, 50, 175, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -340,7 +340,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.bottom;
       final outsideJustification = common.OutsideJustification.endDrawArea;
-      final drawAreaBounds = const Rectangle<int>(0, 0, 175, 50);
+      final drawAreaBounds = Rectangle<int>(0, 0, 175, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -363,7 +363,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.start;
       final outsideJustification = common.OutsideJustification.startDrawArea;
-      final drawAreaBounds = const Rectangle<int>(0, 25, 125, 75);
+      final drawAreaBounds = Rectangle<int>(0, 25, 125, 75);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -386,7 +386,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.end;
       final outsideJustification = common.OutsideJustification.endDrawArea;
-      final drawAreaBounds = const Rectangle<int>(75, 25, 125, 75);
+      final drawAreaBounds = Rectangle<int>(75, 25, 125, 75);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -409,7 +409,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.top;
       final outsideJustification = common.OutsideJustification.start;
-      final drawAreaBounds = const Rectangle<int>(25, 50, 150, 50);
+      final drawAreaBounds = Rectangle<int>(25, 50, 150, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -432,7 +432,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.top;
       final outsideJustification = common.OutsideJustification.end;
-      final drawAreaBounds = const Rectangle<int>(25, 50, 150, 50);
+      final drawAreaBounds = Rectangle<int>(25, 50, 150, 50);
 
       // Behavior takes up 50 height, so 50 height remains for the chart.
       final expectedChartSize = const Size(200.0, 50.0);
@@ -455,7 +455,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.start;
       final outsideJustification = common.OutsideJustification.start;
-      final drawAreaBounds = const Rectangle<int>(75, 25, 150, 50);
+      final drawAreaBounds = Rectangle<int>(75, 25, 150, 50);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -479,7 +479,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.start;
       final outsideJustification = common.OutsideJustification.end;
-      final drawAreaBounds = const Rectangle<int>(75, 25, 150, 50);
+      final drawAreaBounds = Rectangle<int>(75, 25, 150, 50);
 
       // Behavior takes up 50 width, so 150 width remains for the chart.
       final expectedChartSize = const Size(150.0, 100.0);
@@ -503,7 +503,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.inside;
       final insideJustification = common.InsideJustification.topStart;
-      final drawAreaBounds = const Rectangle<int>(25, 25, 175, 75);
+      final drawAreaBounds = Rectangle<int>(25, 25, 175, 75);
 
       // Behavior is layered on top, chart uses the full size.
       final expectedChartSize = const Size(200.0, 100.0);
@@ -526,7 +526,7 @@ void main() {
         (WidgetTester tester) async {
       final behaviorPosition = common.BehaviorPosition.inside;
       final insideJustification = common.InsideJustification.topEnd;
-      final drawAreaBounds = const Rectangle<int>(25, 25, 175, 75);
+      final drawAreaBounds = Rectangle<int>(25, 25, 175, 75);
 
       // Behavior is layered on top, chart uses the full size.
       final expectedChartSize = const Size(200.0, 100.0);
