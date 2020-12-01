@@ -110,7 +110,7 @@ class SelectNearest<D> implements ChartBehavior<D> {
       this.selectClosestSeries = true,
       this.eventTrigger = SelectionTrigger.hover,
       this.maximumDomainDistancePx,
-      this.useRelativeDistance = false,
+      this.useRelativeDistance,
       this.hoverEventDelay}) {
     // Setup the appropriate gesture listening.
     switch (eventTrigger) {
@@ -170,15 +170,17 @@ class SelectNearest<D> implements ChartBehavior<D> {
       return false;
     }
 
+    bool selectNearestByDomainOverride;
+    if (useRelativeDistance != null) selectNearestByDomainOverride = !useRelativeDistance;
     var details = _chart.getNearestDatumDetailPerSeries(
-        chartPoint, selectAcrossAllSeriesRendererComponents, selectNearestByDomainOverride: useRelativeDistance == false);
+        chartPoint, selectAcrossAllSeriesRendererComponents, selectNearestByDomainOverride: selectNearestByDomainOverride);
 
     final seriesList = <ImmutableSeries<D>>[];
     var seriesDatumList = <SeriesDatum<D>>[];
 
     if (details != null && details.isNotEmpty) {
       double distance;
-      if (useRelativeDistance == false) {
+      if (useRelativeDistance == null || useRelativeDistance == false) {
         details.sort((a, b) => a.domainDistance.compareTo(b.domainDistance));
         distance = details[0].domainDistance;
       } else {

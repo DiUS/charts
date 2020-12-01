@@ -63,7 +63,7 @@ class SelectNearest extends ChartBehavior<common.SelectNearest> {
       this.eventTrigger,
       this.desiredGestures,
       this.maximumDomainDistancePx,
-      this.useRelativeDistance = false});
+      this.useRelativeDistance});
 
   factory SelectNearest(
       {common.SelectionModelType selectionModelType =
@@ -73,7 +73,7 @@ class SelectNearest extends ChartBehavior<common.SelectNearest> {
       bool selectClosestSeries = true,
       common.SelectionTrigger eventTrigger = common.SelectionTrigger.tap,
       int maximumDomainDistancePx,
-      bool useRelativeDistance = false}) {
+      bool useRelativeDistance}) {
     return new SelectNearest._internal(
         selectionModelType: selectionModelType,
         expandToDomain: expandToDomain,
@@ -148,7 +148,8 @@ class SelectNearest extends ChartBehavior<common.SelectNearest> {
     hashcode = hashcode * 37 + expandToDomain.hashCode;
     hashcode = hashcode * 37 + selectClosestSeries.hashCode;
     hashcode = hashcode * 37 + maximumDomainDistancePx.hashCode;
-    hashcode = hashcode * 37 + useRelativeDistance.hashCode;
+    if (useRelativeDistance != null)
+      hashcode = hashcode * 37 + useRelativeDistance.hashCode;
     return hashcode;
   }
 }
